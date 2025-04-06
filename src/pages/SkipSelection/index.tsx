@@ -4,6 +4,7 @@ import SkipOptionCard from '../../components/SkipOptionCard';
 import WizardSteps from '../../components/WizardSteps/WizardSteps';
 import { Skip } from '../../types/Skip';
 import { WIZARD_STEPS } from '../../constants/wizardSteps';
+import { LOADING_MESSAGES, ALERT_MESSAGES } from '../../constants/messages';
 import './styles.css';
 
 const SkipSelection: React.FC = () => {
@@ -18,15 +19,15 @@ const SkipSelection: React.FC = () => {
   };
 
   const handleContinue = () => {
-    alert('Next page not implemented yet!');
+    alert(ALERT_MESSAGES.NEXT_PAGE_NOT_IMPLEMENTED);
   };
 
   if (loading) {
-    return <div className="skip-selection-message loading">Loading skips...</div>;
+    return <div className="skip-selection-message loading">{LOADING_MESSAGES.DEFAULT}</div>;
   }
 
   if (error) {
-    return <div className="skip-selection-message error">Error: {error}</div>;
+    return <div className="skip-selection-message error">{error}</div>;
   }
 
   return (

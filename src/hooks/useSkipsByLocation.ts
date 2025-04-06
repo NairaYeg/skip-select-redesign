@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Skip } from "../types/Skip";
-import { MESSAGES } from "../constants/messages";
+import { ERROR_MESSAGES } from "../constants/messages";
 
 const API_BASE_URL = "https://app.wewantwaste.co.uk/api";
 
@@ -17,7 +17,7 @@ export const useSkipsByLocation = (postcode: string, area: string) => {
         );
 
         if (!response.ok) {
-          throw new Error(MESSAGES.ERROR_HTTP(response.status));
+          throw new Error(ERROR_MESSAGES.ERROR_HTTP(response.status));
         }
 
         const data: Skip[] = await response.json();
@@ -25,7 +25,9 @@ export const useSkipsByLocation = (postcode: string, area: string) => {
         setLoading(false);
       } catch (err) {
         const errorMessage =
-          err instanceof Error ? err.message : MESSAGES.ERROR_FETCH_FAILED;
+          err instanceof Error
+            ? err.message
+            : ERROR_MESSAGES.ERROR_FETCH_FAILED;
         setError(errorMessage);
         setLoading(false);
       }

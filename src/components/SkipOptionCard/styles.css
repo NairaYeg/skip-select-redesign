@@ -41,6 +41,7 @@
 }
 
 .skip-option-title {
+  align-self: center;
   font-size: 0.75rem;
   font-weight: 600;
   margin: 0;
@@ -60,9 +61,11 @@
 
 .skip-option-detail,
 .skip-option-price {
+  align-self: center;
   font-size: 0.875rem;
   color: #4b5563;
   margin: 0;
+  
 }
 
 .skip-option-price {

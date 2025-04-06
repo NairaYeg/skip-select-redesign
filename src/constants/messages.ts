@@ -1,4 +1,4 @@
-export const MESSAGES = {
+export const ERROR_MESSAGES = {
   ERROR_FETCH_FAILED: "Failed to fetch the data",
   ERROR_HTTP: (status: number) => `HTTP error! Status: ${status}`,
 } as const;
@@ -14,3 +14,12 @@ export const FLAG_MESSAGES = {
   PRIVATE_PROPERTY_ONLY: "Private Property Only",
   NOT_SUITABLE_FOR_HEAVY_WASTE: "Not Suitable for Heavy Waste",
 } as const;
+
+export const LOADING_MESSAGES = {
+  DEFAULT: "Loading...",
+  SKIP_SELECTION: "Loading skips...",
+};
+
+export const ALERT_MESSAGES = {
+  NEXT_PAGE_NOT_IMPLEMENTED: "Next page not implemented yet!",
+};
