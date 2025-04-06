@@ -27,7 +27,6 @@
   cursor: not-allowed;
   background-color: #f3f4f6;
   cursor: not-allowed; 
-  pointer-events: none; 
 }
 
 .skip-option-card.disabled:hover {
@@ -38,6 +37,7 @@
 .skip-option-content {
   display: flex;
   flex-direction: column;
+  margin: 1rem ;
 }
 
 .skip-option-title {
