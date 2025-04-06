@@ -1,0 +1,171 @@
+/* Mobile-first base styles */
+.skip-option-card {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-content: space-between; 
+  width: 100%; 
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.skip-option-card:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px); 
+}
+
+.skip-option-card.selected {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px #3b82f6; 
+}
+
+.skip-option-card.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #f3f4f6;
+  cursor: not-allowed; 
+  pointer-events: none; 
+}
+
+.skip-option-card.disabled:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transform: none;
+}
+
+.skip-option-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; 
+}
+
+.skip-option-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin: 0;
+  color: #1f2937; 
+}
+
+.skip-option-image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.skip-option-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.skip-option-detail,
+.skip-option-price {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+.skip-option-price {
+  font-weight: 500;
+}
+
+.skip-option-button {
+  width: 100%;
+  padding: 8px 12px;
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.skip-option-button:hover {
+  background-color: #2563eb;
+}
+
+.skip-option-card.selected .skip-option-button {
+  background-color: #1e40af;
+}
+
+/* Small devices (sm and up, 576px) */
+@media (min-width: 576px) {
+  .skip-option-card {
+    padding: 14px;
+  }
+
+  .skip-option-title {
+    font-size: 1.125rem;
+  }
+
+  .skip-option-detail,
+  .skip-option-price {
+    font-size: 0.9375rem;
+  }
+
+  .skip-option-button {
+    padding: 8px 14px;
+  }
+}
+
+/* Medium devices (md and up, 768px) */
+@media (min-width: 768px) {
+  .skip-option-card {
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .skip-option-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .skip-option-detail,
+  .skip-option-price {
+    font-size: 1rem;
+  }
+
+  .skip-option-button {
+    padding: 10px 16px;
+    font-size: 1rem;
+  }
+}
+
+/* Large devices (lg and up, 1024px) */
+@media (min-width: 1024px) {
+  .skip-option-card {
+    width: 250px;
+    height: 250px; 
+    padding: 20px;
+  }
+
+  .skip-option-title {
+    font-size: 1rem;
+    padding: 0.1rem;
+  }
+
+  .skip-option-detail,
+  .skip-option-price {
+    font-size: 1rem; 
+    padding: 0.1rem;
+  }
+
+  .skip-option-price {
+    padding-bottom: 0.5rem;
+  }
+
+  .skip-option-button {
+    padding: 12px 16px;
+  }
+}
+
+/* Extra large devices (xl and up, 1280px) */
+@media (min-width: 1280px) {
+  .skip-option-card {
+    width: 280px; 
+    height: 280px;
+  }
+}
