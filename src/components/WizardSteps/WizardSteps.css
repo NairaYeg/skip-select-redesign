@@ -3,7 +3,6 @@
   display: flex;
   align-items: center;
   margin-top: 0px;
-  background-color: #f9fafb;
   gap: 0;
   overflow-x: auto;
 }
@@ -62,16 +61,16 @@
 }
 
 .step-connector.completed {
-  background-color: #4caf50;
+  background-color: #88c88b;;
 }
 
 .step-connector.before-active {
-  background-color: #2196f3;
+  background-color: #89c3f1;
 }
 
 /* State styles */
 .wizard-step.completed .step-icon {
-  background-color: #4caf50;
+  background-color: #88c88b;
 }
 
 .wizard-step.completed {
@@ -79,7 +78,7 @@
 }
 
 .wizard-step.active .step-icon {
-  background-color: #2196f3;
+  background-color: #89c3f1;
 }
 
 .wizard-step.active {

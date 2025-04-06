@@ -38,7 +38,6 @@
 .skip-option-content {
   display: flex;
   flex-direction: column;
-  gap: 6px; 
 }
 
 .skip-option-title {
@@ -103,7 +102,7 @@
 
   .skip-option-detail,
   .skip-option-price {
-    font-size: 0.9375rem;
+    font-size: 0.75rem;
   }
 
   .skip-option-button {
@@ -116,7 +115,7 @@
   .skip-option-card {
     width: 250px;
     height: 250px;
-    padding: 16px;
+
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
@@ -131,7 +130,6 @@
   }
 
   .skip-option-button {
-    padding: 10px 16px;
     font-size: 1rem;
   }
 }
@@ -156,12 +154,9 @@
   }
 
   .skip-option-price {
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.2rem;
   }
 
-  .skip-option-button {
-    padding: 12px 16px;
-  }
 }
 
 /* Extra large devices (xl and up, 1280px) */
