@@ -49,11 +49,8 @@ const SkipSelection: React.FC = () => {
       {selectedSkip && (
         <footer className="skip-selection-footer">
           <p>
-            Selected: {selectedSkip.size} Yard Skip - £
-            {(selectedSkip.price_before_vat
-              ? selectedSkip.price_before_vat
-              : selectedSkip.transport_cost
-            )?.toFixed(2) || 'N/A'}
+            Selected: {selectedSkip.size} Yard Skip,{' '}
+            {selectedSkip?.hire_period_days} day hire period
           </p>
           <button className="continue-button" onClick={handleContinue}>
             Continue

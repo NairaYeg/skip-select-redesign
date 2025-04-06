@@ -1,46 +1,48 @@
-# Getting Started with Create React App
+# Skip Selection Redesign
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based web application designed to help users select skip sizes based on their location. The app features a dynamic, responsive, and user-friendly interface.
 
-## Available Scripts
+## Frontend Approach
 
-In the project directory, you can run:
+- **Component-Based Architecture**: Modular, reusable components (e.g., `SkipOptionCard`, `WizardSteps`) for maintainability.
+- **Custom Hooks**: Logic encapsulation with hooks like `useSkipsByLocation` for API interactions.
+- **TypeScript**: Enforces type safety to minimize runtime errors.
+- **Conditional Rendering**: Dynamically displays elements (e.g., flags, footers) based on application state.
+- **Responsive Design**: Utilizes media queries, and mobile first approach for cross-device compatibility.
+- **State Management**: Leverages React’s `useState` for efficient local state handling (e.g., `selectedSkip`).
 
-### `yarn start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Prerequisites
+- Yarn package manager
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+## Scripts
 
-### `yarn test`
+- `yarn start`: Runs the app in development mode.
+- `yarn build`: Builds the app for production.
+- `yarn test`: Launches the test runner.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Folder Structure
 
-### `yarn build`
+```
+src/
+├── components/       
+│   ├── SkipOptionCard/  
+│   ├── WizardSteps/   
+├── constants/       
+├── hooks/         
+│   ├── useSkipsByLocation.ts 
+├── pages/          
+│   ├── SkipSelection/  
+├── types/            
+│   ├── Skip.ts        
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Future Improvements
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Add unit tests.
+- Improve accessibility (ARIA roles, keyboard navigation).
