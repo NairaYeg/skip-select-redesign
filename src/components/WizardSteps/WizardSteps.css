@@ -1,0 +1,172 @@
+/* Mobile-first base styles */
+.wizard {
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+  background-color: #f9fafb;
+  gap: 0;
+  overflow-x: auto;
+}
+
+.wizard-step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 30px;
+  padding: 4px 4px 8px;
+  color: #6b7280;
+  transition: color 0.3s;
+}
+
+.step-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.step-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #e5e7eb;
+  font-size: 12px;
+  transition: background-color 0.3s;
+  z-index: 1;
+}
+
+.step-label {
+  margin-top: 4px;
+  font-size: 10px;
+  text-align: center;
+  max-width: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.step-connector {
+  position: absolute;
+  top: calc(12px + 4px);
+  left: calc(50% + 12px);
+  width: calc(100% - 24px);
+  height: 2px;
+  background-color: #e5e7eb;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.step-connector.completed {
+  background-color: #4caf50;
+}
+
+.step-connector.before-active {
+  background-color: #2196f3;
+}
+
+/* State styles */
+.wizard-step.completed .step-icon {
+  background-color: #4caf50;
+}
+
+.wizard-step.completed {
+  color: #065f46;
+}
+
+.wizard-step.active .step-icon {
+  background-color: #2196f3;
+}
+
+.wizard-step.active {
+  color: #1e40af;
+  font-weight: 600;
+}
+
+.wizard-step.pending {
+  opacity: 0.7;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.wizard-step.pending .step-icon {
+  background-color: #e5e7eb;
+}
+
+/* Small devices (sm and up, 576px) */
+@media (min-width: 576px) {
+  .wizard {
+    padding: 12px;
+  }
+
+  .wizard-step {
+    min-width: 80px;
+    padding: 8px 8px 12px; 
+  }
+
+  .step-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .step-label {
+    font-size: 12px;
+    max-width: 80px;
+  }
+
+  .step-connector {
+    top: calc(16px + 8px);
+    left: calc(50% + 16px);
+    width: calc(100% - 32px);
+  }
+}
+
+/* Medium devices (md and up, 768px) */
+@media (min-width: 768px) {
+  .wizard {
+    justify-content: center;
+    padding: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow-x: visible;
+  }
+
+  .wizard-step {
+    min-width: 100px;
+    padding: 10px 10px 14px;
+  }
+
+  .step-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .step-label {
+    font-size: 14px;
+    max-width: 100px;
+  }
+
+  .step-connector {
+    top: calc(20px + 10px);
+    left: calc(50% + 20px);
+    width: calc(100% - 40px);
+  }
+}
+
+/* Large devices (lg and up, 1024px) */
+@media (min-width: 1024px) {
+  .wizard-step {
+    min-width: 120px;
+    padding: 12px 12px 16px;
+  }
+
+  .step-label {
+    font-size: 15px;
+  }
+}

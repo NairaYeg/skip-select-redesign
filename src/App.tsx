@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import SkipSelection from './pages/SkipSelection';
+import { WIZARD_STEPS } from './constants/wizardSteps';
+import './styles/breakpoints.css'; 
 
-function App() {
+const App: React.FC = () => {
+  const [currentStepId, _setCurrentStepId] = useState<number>(
+    WIZARD_STEPS.find((step) => step.name === 'Select Skip')?.id || 3
+  );
+
+  const renderPage = () => {
+    switch (currentStepId) {
+      case 3: 
+        return <SkipSelection />;
+      default:
+        return <div>Page not implemented</div>;
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      {renderPage()}
     </div>
   );
-}
+};
 
 export default App;
