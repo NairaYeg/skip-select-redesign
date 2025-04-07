@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSkipsByLocation } from '../../hooks/useSkipsByLocation';
 import SkipOptionCard from '../../components/SkipOptionCard';
-import WizardSteps from '../../components/WizardSteps/WizardSteps';
+import WizardSteps from '../../components/WizardSteps';
 import { Skip } from '../../types/Skip';
 import { WIZARD_STEPS } from '../../constants/wizardSteps';
 import { LOADING_MESSAGES, ALERT_MESSAGES } from '../../constants/messages';

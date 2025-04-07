@@ -1,57 +1,56 @@
+.skip-flag {
+  position: absolute;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: bold;
+  color: #fff;
+  display: flex; 
+  align-items: center;
+  gap: 4px; 
+  z-index: 1; 
+}
+
+.skip-flag--message {
+  top: 8px;
+  right: 8px;
+  background-color: rgba(11, 15, 244, 0.7);
+}
+
+.skip-flag--warning {
+  background-color: rgba(0, 0, 0, 0.7); 
+}
+
+.skip-flag--private-property {
+  bottom: 60px;
+  left: 8px;
+  background-color: rgba(255, 165, 0, 0.9); 
+  font-size: 0.65rem;
+}
+
+.skip-flag--heavy-waste {
+  bottom: 24px;
+  left: 8px;
+  background-color: rgba(255, 69, 58, 0.9); 
+  font-size: 0.65rem;
+}
+
+.skip-flag__icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.skip-flag__text {
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
   .skip-flag {
-    position: absolute;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.65rem;
-    font-weight: bold;
-    color: #fff;
-    display: flex; 
-    align-items: center;
-    gap: 4px; 
-    z-index: 1; 
+    font-size: 0.75rem; 
   }
-  
-  .skip-flag--message {
-    top: 8px;
-    right: 8px;
-    background-color: rgba(11, 15, 244, 0.7);
-  }
-  
-  .skip-flag--warning {
-    background-color: rgba(0, 0, 0, 0.7); 
-  }
-  
-  .skip-flag--private-property {
-    bottom: 60px;
-    left: 8px;
-    background-color: rgba(255, 165, 0, 0.9); 
-    font-size: 0.65rem;
-  }
-  
+
+  .skip-flag--private-property,
   .skip-flag--heavy-waste {
-    bottom: 24px;
-    left: 8px;
-    background-color: rgba(255, 69, 58, 0.9); 
-    font-size: 0.65rem;
+    font-size: 0.75rem;; 
   }
-  
-  .skip-flag__icon {
-    display: inline-flex;
-    align-items: center;
-  }
-  
-  .skip-flag__text {
-    line-height: 1;
-  }
-  
-  @media (min-width: 768px) {
-    .skip-flag {
-      font-size: 0.75rem; 
-    }
-  
-    .skip-flag--private-property,
-    .skip-flag--heavy-waste {
-      font-size: 0.75rem;; 
-    }
-  }
-  
+}

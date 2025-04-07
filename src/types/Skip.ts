@@ -1,4 +1,3 @@
-// Represents a waste skip available for hire at a specific location
 export interface Skip {
   id: number;
   size: number;

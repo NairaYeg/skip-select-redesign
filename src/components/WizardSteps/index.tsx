@@ -1,6 +1,6 @@
 import React from 'react';
 import { WIZARD_STEPS, WizardStep } from '../../constants/wizardSteps';
-import './WizardSteps.css';
+import './styles.css';
 
 interface WizardStepsProps {
   activeStepId: number;
