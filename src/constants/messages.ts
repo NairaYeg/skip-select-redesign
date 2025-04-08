@@ -21,5 +21,12 @@ export const LOADING_MESSAGES = {
 };
 
 export const ALERT_MESSAGES = {
-  NEXT_PAGE_NOT_IMPLEMENTED: "Next page not implemented yet!",
+  PAGE_NOT_IMPLEMENTED: "This page is not yet implemented.",
 };
+
+export const UI_MESSAGES = {
+  SKIP_SELECTION: {
+    TITLE: "Choose Your Skip Size",
+    DESCRIPTION: "Select the skip size that best suits your needs",
+  },
+} as const;

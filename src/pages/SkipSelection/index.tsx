@@ -4,11 +4,16 @@ import SkipOptionCard from '../../components/SkipOptionCard';
 import WizardSteps from '../../components/WizardSteps';
 import { Skip } from '../../types/Skip';
 import { WIZARD_STEPS } from '../../constants/wizardSteps';
-import { LOADING_MESSAGES, ALERT_MESSAGES } from '../../constants/messages';
+import { LOADING_MESSAGES, ALERT_MESSAGES, UI_MESSAGES } from '../../constants/messages';
 import './styles.css';
 
-const SkipSelection: React.FC = () => {
-  const { skips, loading, error } = useSkipsByLocation('LE10', 'Hinckley');
+interface SkipSelectionProps {
+  postcode: string;
+  location: string;
+}
+
+const SkipSelection: React.FC<SkipSelectionProps> = ({ postcode, location }) => {
+  const { skips, loading, error } = useSkipsByLocation(postcode, location);
   const [selectedSkip, setSelectedSkip] = useState<Skip | null>(null);
 
   const activeStepId = WIZARD_STEPS.find((step) => step.name === 'Select Skip')?.id || 3;
@@ -19,7 +24,7 @@ const SkipSelection: React.FC = () => {
   };
 
   const handleContinue = () => {
-    alert(ALERT_MESSAGES.NEXT_PAGE_NOT_IMPLEMENTED);
+    alert(ALERT_MESSAGES.PAGE_NOT_IMPLEMENTED);
   };
 
   if (loading) {
@@ -34,8 +39,8 @@ const SkipSelection: React.FC = () => {
     <main className="skip-selection">
       <WizardSteps activeStepId={activeStepId} />
       <header className="skip-selection-header">
-        <h1>Choose Your Skip Size</h1>
-        <p>Select the skip size that best suits your needs</p>
+      <h1>{UI_MESSAGES.SKIP_SELECTION.TITLE}</h1>
+      <p>{UI_MESSAGES.SKIP_SELECTION.DESCRIPTION}</p>
       </header>
       <section className="skip-selection-grid">
         {skips.map((skip) => (
