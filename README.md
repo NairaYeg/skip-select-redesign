@@ -1,6 +1,7 @@
 # Skip Selection Redesign
 
-A React-based web application designed to help users select skip sizes based on their location. The app features a dynamic, responsive, and user-friendly interface.
+A React-based web application designed to help users select skip sizes based on their location. The app features a dynamic, responsive, and user-friendly interface. This project was developed as a technical task for a company.
+
 
 ## Frontend Approach
 
